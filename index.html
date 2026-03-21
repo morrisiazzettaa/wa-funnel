@@ -1,254 +1,79 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community WhatsApp</title>
+  <meta
+    name="description"
+    content="Accedi alla community WhatsApp in modo semplice e diretto. Entra ora."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
 
-:root {
-  --bg: #eef4ff;
-  --surface: rgba(255, 255, 255, 0.96);
-  --surface-border: rgba(40, 80, 160, 0.18);
-  --text: #0b1220;
-  --text-soft: #475569;
+    <p class="tiktok-note" style="font-size: calc(0.9rem + 2px);">
+      <span style="display:inline-block; border-bottom: 1px solid #000; padding-bottom: 2px;">
+        Apri nel browser (3 puntini in alto a destra)
+        <span style="font-size: calc(1.2rem + 2px);">👆</span>
+      </span>
+    </p>
 
-  --primary: #1d4ed8;
-  --primary-strong: #1e40af;
-  --primary-soft: #e0eaff;
+    <section class="hero">
+      <div class="hero__card">
 
-  --shadow-lg: 0 25px 70px rgba(20, 40, 120, 0.18);
-  --shadow-md: 0 12px 35px rgba(20, 40, 120, 0.12);
+        <div class="hero__topbar">
+          <span class="hero__badge">Accesso gratuito</span>
+          <span class="hero__proof">+23 entrati oggi</span>
+        </div>
 
-  --radius-xl: 28px;
-  --radius-lg: 20px;
-  --radius-md: 14px;
+        <div class="hero__content">
+          <p class="hero__eyebrow">Community WhatsApp</p>
 
-  --container: 480px;
-}
+          <h1 class="hero__title">
+            Accedi alla community WhatsApp
+          </h1>
 
-html {
-  scroll-behavior: smooth;
-}
+          <p class="hero__subtitle">
+            Entra nel gruppo in modo semplice e diretto. Scrivi su WhatsApp e accedi senza passaggi complicati.
+          </p>
 
-body {
-  font-family: "Inter", sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(60, 100, 220, 0.15), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.12), transparent 35%),
-    linear-gradient(180deg, #f4f8ff 0%, #eaf1ff 100%);
-  color: var(--text);
-  min-height: 100vh;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+          <ul class="hero__bullets" aria-label="Vantaggi principali">
+            <li>Segnali pronti + copia e incolla</li>
+            <li>Nessuna esperienza richiesta</li>
+            <li>Chat attiva con altri trader</li>
+          </ul>
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+          <div class="hero__cta-block">
+            <p class="hero__preframe">
+              Stai per entrare nella community WhatsApp
+            </p>
 
-.page {
-  min-height: 100vh;
-  padding: 20px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+            <a
+              class="hero__cta"
+              href="https://wa.me/393514263710?text=Ciao%2C%20vengo%20da%20TikTok%20e%20voglio%20entrare%20nella%20community"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Entra su WhatsApp"
+            >
+              ENTRA SU WHATSAPP
+            </a>
 
-/* TIKTOK NOTE MIGLIORATA */
-.tiktok-note {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #000;
-  width: 100%;
-  max-width: var(--container);
-  text-align: right; /* spostato verso destra */
-  margin-bottom: 14px;
-  padding-right: 4px;
-}
-
-.tiktok-note__emoji {
-  font-size: 1.2rem; /* emoji leggermente più grande */
-}
-
-.hero {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.hero__card {
-  width: 100%;
-  max-width: var(--container);
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  padding: 18px;
-  backdrop-filter: blur(8px);
-}
-
-.hero__topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 22px;
-}
-
-.hero__badge,
-.hero__proof {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 34px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.hero__badge {
-  background: var(--primary-soft);
-  color: var(--primary-strong);
-}
-
-.hero__proof {
-  background: #f1f5f9;
-  color: var(--text-soft);
-}
-
-.hero__content {
-  display: flex;
-  flex-direction: column;
-}
-
-.hero__eyebrow {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--primary-strong);
-  margin-bottom: 12px;
-}
-
-.hero__title {
-  font-size: clamp(1.9rem, 7vw, 3rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-  font-weight: 800;
-  margin-bottom: 14px;
-  max-width: 11ch;
-}
-
-.hero__subtitle {
-  font-size: 1rem;
-  color: var(--text-soft);
-  margin-bottom: 22px;
-  max-width: 34ch;
-}
-
-.hero__bullets {
-  list-style: none;
-  display: grid;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-
-.hero__bullets li {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 46px;
-  padding: 0 14px 0 42px;
-  background: #ffffff;
-  border: 1px solid rgba(30, 64, 175, 0.18);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.hero__bullets li::before {
-  content: "";
-  position: absolute;
-  left: 14px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-strong) 100%);
-  box-shadow: 0 0 0 5px rgba(30, 64, 175, 0.15);
-}
-
-.hero__cta-block {
-  margin-top: 6px;
-  padding: 18px 16px 16px;
-  background: linear-gradient(180deg, rgba(224, 234, 255, 0.6) 0%, rgba(255, 255, 255, 0.95) 100%);
-  border: 1px solid rgba(30, 64, 175, 0.2);
-  border-radius: var(--radius-lg);
-}
-
-.hero__preframe {
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 14px;
-}
-
-.hero__cta {
-  width: 100%;
-  min-height: 62px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  border-radius: 18px;
-  background: linear-gradient(180deg, #2563eb 0%, #1e40af 100%);
-  color: #ffffff;
-  font-size: 0.95rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  box-shadow: 0 16px 35px rgba(30, 64, 175, 0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.hero__cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 20px 40px rgba(30, 64, 175, 0.4);
-}
-
-.hero__cta:active {
-  transform: translateY(0);
-  box-shadow: 0 10px 20px rgba(30, 64, 175, 0.3);
-}
-
-.hero__microcopy {
-  margin-top: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 14px;
-}
-
-.hero__microcopy span {
-  font-size: 0.78rem;
-  color: var(--text-soft);
-}
-
-@media (min-width: 640px) {
-  .page {
-    padding: 32px 20px;
-  }
-
-  .hero__card {
-    padding: 22px;
-  }
-
-  .hero__subtitle {
-    font-size: 1.05rem;
-  }
-
-  .hero__cta {
-    font-size: 1rem;
-  }
-}
+            <div class="hero__microcopy">
+              <span>Accesso semplice e guidato</span>
+              <span>Gratis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
