@@ -15,9 +15,6 @@
   --primary-strong: #1e40af;
   --primary-soft: #e0eaff;
 
-  --success-soft: #eefaf3;
-  --success-text: #157347;
-
   --shadow-lg: 0 25px 70px rgba(20, 40, 120, 0.18);
   --shadow-md: 0 12px 35px rgba(20, 40, 120, 0.12);
 
@@ -53,8 +50,25 @@ a {
   min-height: 100vh;
   padding: 20px 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* TIKTOK NOTE MIGLIORATA */
+.tiktok-note {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000;
+  width: 100%;
+  max-width: var(--container);
+  text-align: right; /* spostato verso destra */
+  margin-bottom: 14px;
+  padding-right: 4px;
+}
+
+.tiktok-note__emoji {
+  font-size: 1.2rem; /* emoji leggermente più grande */
 }
 
 .hero {
